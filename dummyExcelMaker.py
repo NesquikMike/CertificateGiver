@@ -2,7 +2,6 @@ import pandas as pd
 import random as rd
 import sys
 
-
 firstNames = (
     "Wilbert", "Monroe", "Dylan", "Bruno", "Tony", "Ronald", "Gordon", "Buster", "Federico", "Doyle",
     "Jackson", "Marlon", "Mauro", "Samuel", "Stuart", "Sidney", "Gayle", "Roy", "Elmer", "Dominick",
@@ -99,7 +98,12 @@ secondNames = (
 
 classNames = []
 
-classSize = int(sys.argv[1])
+try:
+    classSize = int(sys.argv[1])
+except IndexError:
+    print("ERROR: Please insert a value for class size, e.g. for a class of 30 please type in 30 after the program"
+          " name")
+    exit()
 
 while len(classNames) < classSize:
     name = firstNames[rd.randint(0, len(firstNames) - 1)] + " " + secondNames[rd.randint(0, len(secondNames) - 1)]
@@ -111,4 +115,4 @@ df = pd.DataFrame.from_dict(frame)
 
 print(df.head(15))
 
-df.to_csv("certificatesSpreadsheet.csv", index=False)
+df.to_csv("classSpreadsheet.csv", index=False)
