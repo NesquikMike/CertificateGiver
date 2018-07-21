@@ -98,6 +98,8 @@ secondNames = (
 
 classNames = []
 
+classSize = 0
+
 try:
     classSize = int(sys.argv[1])
 except IndexError:
