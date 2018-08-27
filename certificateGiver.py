@@ -41,8 +41,32 @@ if recentWeeksToIgnore > 0:
             if kidsDict[kid][-i] == "CERTIFICATE":
                 kids.remove(kid)
 
-date = str(datetime.datetime.today().strftime('%d-%m-%Y_%H_%M_%S'))
-df[date] = " "
+date = str(datetime.datetime.today().strftime('%d-%m-%Y'))
+if date not in df.columns:
+    df[date] = " "
+else:
+    overwriteToday = input("You have certificates already assigned for today. Are you sure you would like to "
+                           "overwrite the certificates given today? (y/n)\n")
+    if overwriteToday == 'y':
+        df[date] = " "
+        print("\nCERTIFICATES OVERWRITTEN\n")
+    elif overwriteToday == 'n':
+        print("Ok, no certificates have been given and no changes have been made to the certificate spreadsheet.")
+        exit()
+    else:
+        overwriteToday = input("Sorry. I haven't understood your input. Please could you answer again, are you sure"
+                               " you would like to overwrite the certificates given today? (y for yes/n for no)\n")
+        if overwriteToday == 'y':
+            df[date] = " "
+            print("\nCERTIFICATES OVERWRITTEN\n")
+        elif overwriteToday == 'n':
+            print("Ok, no certificates have been given and no changes have been made to the certificate spreadsheet.")
+            exit()
+        else:
+            overwriteToday = ("Sorry. I haven't understood your input. certificates have been given and no changes "
+                              "have been made to the certificate spreadsheet. If you would still like to make changes "
+                              "please run this program again")
+            exit()
 
 print("CERTIFICATES FOR: ")
 for i in range(0, certificatesToGive):
