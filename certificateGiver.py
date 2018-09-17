@@ -19,7 +19,7 @@ elif len(sys.argv) == 2:
             "EVENTUALLY CAUSE AN ERROR")
 else:
     recentWeeksToIgnore = 3
-    certificatesToGive = 5
+    certificatesToGive = 2
 
 df = pd.read_csv("classSpreadsheet.csv")
 
