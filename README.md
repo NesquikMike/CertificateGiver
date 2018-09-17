@@ -4,12 +4,12 @@ This markdown file is an instructional guide on how to use the Certificate Giver
 ## Set Up
 
   I have already installed the Certificate Giver on your computer and the accompanying packages that you will need 
-  for it like Pandas. So all you have to do now is go into the right folder and do a Git Pull to get the latest 
+  for it like Pandas, so all you have to do now is go into the right folder and do a Git Pull to get the latest 
   version.  
   
   1. First step then is to open your Terminal.
   
-  2. Now let's check that we are in the right place. Let's recap you should remember some of this from the Report 
+  2. Now let's check that we are in the right place. Let's recap, you should remember some of this from the Report 
   Writer. Although don't worry if you don't since it has been a while since you last used that! Into your terminal 
   let's type in `pwd` (which stands for "present working directory") after the dollar sign and 
   press Enter. You should get something that looks like this:
@@ -76,7 +76,7 @@ This markdown file is an instructional guide on how to use the Certificate Giver
         ```
         
   5. We're now ready to make a spreadsheet suitable for all the kids in your class. This bit is really easy and you 
-  hopefully won't have to do it again this academic year. You will have to answer the following where `[Class Size]` is 
+  hopefully won't have to do it again this academic year. You will have to enter the following where `[Class Size]` is 
   a number equal to the number of children in your class. 
   
         ```bash
@@ -105,7 +105,7 @@ This markdown file is an instructional guide on how to use the Certificate Giver
         14           Aaron Shaheen
         ``` 
         
-  6. Last step we need to do manually, unfortunately, is open up the CSV we have just made in the last step in 
+  6. Last step we need to do manually, unfortunately, is open up the CSV we have just made in 
   Microsoft Excel and replace the fake names with the real names of the kids in your class. We can do this in the 
   normal way without the terminal by going into Finder and going into your Documents folder and then into your 
   CertificateGiver folder and then opening the classSpreadsheet.csv from there. But, let's be fancy and take a shortcut 
@@ -121,13 +121,13 @@ This markdown file is an instructional guide on how to use the Certificate Giver
      save your changes you don't change the name of the CSV, or the Certificate Giver will not work. When you have 
      finished close your terminal. 
   
-We've finished setup and now we are ready to use the Certificate Giver! Good work, You're becoming a real Pro with 
+We've finished setup and now we are ready to use the Certificate Giver! Excellent stuff, you're becoming a real Pro with 
 the terminal!
   
 ## Using the Certificate Writer
 
-  1. Open your Terminal and move into your Documents folder by doing (don't forget you can use Tab to predict 
-  directory and file names once you have typed a few letters with the Tab button):
+  1. Open your Terminal and move into your Documents folder by doing the following - don't forget you can use Tab to predict 
+  directory and file names once you have typed a few letters with the Tab button:
         
         ```bash
         $ cd Documents
@@ -149,7 +149,7 @@ the terminal!
         $ python3 certificateGiver.py [Certificates to Give] [Weeks to Ignore]
         ```
   
-      Since the default values for `[Certificates to Give]` and `[Weeks to Ignore]` are 2 & 3 respectively entering the 
+      Since the default values for `[Certificates to Give]` and `[Weeks to Ignore]` are 2 & 3 respectively entering 
       the command below into the Terminal will give 2 certificates and will ensure that any child that has received a 
       certificate in the last 3 occasions that you have given a certificate will not get a certificate:
       
@@ -162,12 +162,11 @@ the terminal!
         ```
             
       After running this the CSV will now also be updated so you can consult this at a later date. If instead you wanted to 
-      change the number of certificates to give this week or to change the number of certificate giving weeks to ignore 
-      when deciding to give certificates, you will need to those optional parameters like so:
+      change the number of certificates to give this week, or to change the number of certificate giving weeks to ignore 
+      when deciding to give certificates, you will need to enter those optional parameters like so:
       
         ```bash
         $ python3 certificateGiver.py 5 5
-        python3 certificateGiver.py 5 5
         CERTIFICATES FOR: 
         Nada Kinkelaar
         Theron Bramlett
@@ -177,12 +176,12 @@ the terminal!
         SPREADSHEET HAS BEEN UPDATED
         ```
             
-      This has given 5 certificates to the 5 children and ensured that anyone who has gotten a certificate in the last 
+      This has given 5 certificates to 5 children and ensured that anyone who has gotten a certificate in the last 
       5 occasions that certificates were given has not gotten another certificate. 
       
       Now that the certificates have been given you can just make a note of the names that appear on the Terminal as 
       they have been recorded in the spreadsheet; you don't need to do anything to the CSV for the changes to be 
-      recorded. You can check them in the CSV to if you prefer or if you want to see who got certificates in previous 
+      recorded. You can check them in the CSV too if you prefer or if you want to see who got certificates in previous 
       weeks. Remember you can open the CSV from the terminal by using the command:
       
       ```bash
